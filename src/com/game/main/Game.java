@@ -80,13 +80,17 @@ public class Game extends Canvas implements Runnable{
     }
 
     public Game() {
-        new Window(WIDTH, HEIGHT, "Game", this);
         handler = new Handler();
+        new Window(WIDTH, HEIGHT, "Game", this);
+        this.addKeyListener(new KeyInput(handler));
         r = new Random();
 
-        for(int i = 0; i < 50; i++) {
-            handler.addObject(new Player(r.nextInt(WIDTH),r.nextInt(HEIGHT), ID.Player));
-        }
+//        for(int i = 0; i < 50; i++) {
+//            handler.addObject(new Player(r.nextInt(WIDTH),r.nextInt(HEIGHT), ID.Player));
+//        }
+
+        handler.addObject(new Player(WIDTH/2-32,HEIGHT/2-32, ID.Player));
+        handler.addObject(new Player(WIDTH/2-100,HEIGHT/2-32, ID.Player2));
 
     }
 
