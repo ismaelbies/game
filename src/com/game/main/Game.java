@@ -90,7 +90,6 @@ public class Game extends Canvas implements Runnable{
 //        }
 
         handler.addObject(new Player(WIDTH/2-32,HEIGHT/2-32, ID.Player));
-        handler.addObject(new Player(WIDTH/2-100,HEIGHT/2-32, ID.Player2));
 
     }
 
