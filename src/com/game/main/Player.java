@@ -10,13 +10,16 @@ public class Player extends GameObject{
     public Player(int x, int y, ID id) {
         super(x, y, id);
 
-
     }
 
     @Override
     public void tick() {
         x += velX;
         y += velY;
+
+        y = Game.clamp(y, 0, Game.HEIGHT - 72);
+        x = Game.clamp(x, 0, Game.WIDTH - 48);
+
     }
 
     @Override
